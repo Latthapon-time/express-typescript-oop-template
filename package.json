@@ -8,7 +8,8 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^4.1.2"
   },
   "optionalDependencies": {
     "@types/nodemon": "^1.19.1",

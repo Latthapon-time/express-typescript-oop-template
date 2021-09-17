@@ -3,7 +3,7 @@ import express, { Application } from 'express'
 import http from 'http' 
 
 // Routers
-import { Routers } from '../routes'
+import { routers, Routers } from '../routes'
 
 export default class Server{
 
@@ -24,13 +24,13 @@ export default class Server{
         this.app.use(express.json())
     }
 
-    public initializeRouter(arrRouters: Routers[]){
+    public initializeRouter(arrRouters: Routers[], version = '/v1.0.0'){
 
         for(const Router of arrRouters) {
 
             const router = new Router()
 
-            this.app.use(router.path, router.config())
+            this.app.use(`${version}${router.path}`, router.config())
         }
     }
 }

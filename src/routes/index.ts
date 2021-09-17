@@ -1,12 +1,10 @@
 // Routes
-import Post from './post'
-import Member from './member'
-import Blog from './blog'
+import Reward from './reward'
 
-export type Routers = (typeof Post | typeof Member | typeof Blog)
+export type Routers = (
+    typeof Reward
+)
 
 export const routers: Routers[] = [
-    Post,
-    Member,
-    Blog
+    Reward
 ]
